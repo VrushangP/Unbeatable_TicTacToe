@@ -135,7 +135,6 @@ int best_move( int board ) {
         out = 1;
         for (i = 0; i < 9; i++) {
             if (htable[board].move[i] != -1) {
-                score(htable[htable[board].move[i]].board);
                 if (htable[htable[board].move[i]].score < out) {
                     out = htable[htable[board].move[i]].score;
                     bestMove = i;
