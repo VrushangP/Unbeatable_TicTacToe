@@ -13,7 +13,10 @@ int main( int argc, char **argv) {
     init_board(START_BOARD);
     join_graph(START_BOARD);
     compute_score();
-    int hash = atoi(argv[argc - 1]);
-    print_node(htable[hash]);
+    int i;
+    for ( i = argc - 1; i > 0; i--) {
+        int hash = atoi(argv[argc - i]);
+        print_node(htable[hash]);
+    }
     return 0;
 }
